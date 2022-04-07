@@ -1,4 +1,4 @@
-import 'package:basearch/src/features/auth/data/dto/user_dto.dart';
+import 'package:InLaw/src/features/auth/data/dto/user_dto.dart';
 import 'package:dio/dio.dart';
 
 import '../../domain/model/user.dart';

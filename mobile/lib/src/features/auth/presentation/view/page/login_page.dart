@@ -1,4 +1,4 @@
-import 'package:basearch/src/common/form_text_field.dart';
+import 'package:InLaw/src/common/form_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -58,6 +58,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
               ),
             ),
           ),
+          //onPressed: store.isLoading ? null : () {store.login, pop},
+          //Navigator.pop(context);
           onPressed: store.isLoading ? null : store.login,
           child: Text('login'.i18n()),
         ),
@@ -89,8 +91,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           onPressed: store.isLoading
               ? null
               : () {
-                  Navigator.pop(context);
-                  Modular.to.pushNamed('/signup/');
+                  Modular.to.pushNamed('/signup');
                 },
           child: Text('signup'.i18n()),
         ),

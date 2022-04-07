@@ -1,4 +1,4 @@
-import 'package:basearch/src/features/auth/domain/model/user.dart';
+import 'package:InLaw/src/features/auth/domain/model/user.dart';
 
 class UserDto {
   const UserDto(this.username, this.password);

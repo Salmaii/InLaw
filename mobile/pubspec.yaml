@@ -1,5 +1,5 @@
-name: basearch
-description: Flutter Sample Architecture Project.
+name: InLaw
+description: InLaw the lawyer and clients app.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
