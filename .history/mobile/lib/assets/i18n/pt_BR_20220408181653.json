@@ -1,9 +1,6 @@
 {
     "app_name" : "Aplicativo de Exemplo",
     
-    "Skip" : "Pular",
-    "Next" : "Proximo",
-    "Get Started" : "Iniciar",
     "username" : "Usuário",
     "username_hint" : "Informe o nome do seu usuário",
     "password" : "Senha",

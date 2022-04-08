@@ -40,9 +40,4 @@ flutter:
     - lib/assets/i18n/
     - lib/assets/images/
 
-  fonts:
-  - family: Kanit
-    fonts:
-      - asset: lib/assets/fonts/Kanit-Regular.ttf
-
 

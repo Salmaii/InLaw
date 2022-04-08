@@ -1,9 +1,6 @@
 {
     "app_name" : "Example App",
 
-    "Skip" : "Skip",
-    "Next" : "Next",
-    "Get Started" : "Get Started",
     "username" : "User",
     "username_hint": "Type your username",
     "password": "Password",
