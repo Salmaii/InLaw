@@ -1,9 +1,9 @@
 import 'package:InLaw/src/common/form_text_field.dart';
+import 'package:InLaw/src/features/auth/presentation/view/page/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
-
 import '../../viewmodel/login_viewmodel.dart';
 
 class LoginPage extends StatefulWidget {
@@ -91,8 +91,12 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           onPressed: store.isLoading
               ? null
               : () {
-                  Modular.to.pushNamed('/signup');
-                },
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUpPage())
+                );
+                  //Modular.to.pushNamed('/signup');
+              },
           child: Text('signup'.i18n()),
         ),
       );
