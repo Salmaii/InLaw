@@ -34,4 +34,6 @@ InLaw App
 
 ## Links
    - [Overleaf Article](https://www.overleaf.com/read/vcmhmpvpybbd)
-   - [Figma Prototype](https://www.figma.com/file/rRFMT7DJIV8f3kF79618F8/In-Law?node-id=0%3A1)
+   - [Figma](https://www.figma.com/file/rRFMT7DJIV8f3kF79618F8/In-Law?node-id=0%3A1)
+   - [Figma Prototype](https://www.figma.com/proto/rRFMT7DJIV8f3kF79618F8/In-Law?node-id=611%3A5085&scaling=scale-down&page-id=0%3A1&starting-point-node-id=611%3A5100&show-proto-sidebar=1)
+
