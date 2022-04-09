@@ -56,16 +56,17 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 itemBuilder: (context, index) => Column(
                   children: [
                     SizedBox(
-                      height: sizeV * 8, //5
+                      height: sizeV * 5, //5
                     ),
                     //_Welcome,
                     Container(
+                      height: sizeV * 10,
                       child: Image.asset(
                         onboardingContents[index].image,
                       )
                     ),
                     SizedBox(
-                      height: sizeV * 8 //5
+                      height: sizeV * 5 //5
                     ),
                     Container(
                       height: sizeV * 40, //40
@@ -73,7 +74,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           "lib/assets/images/legal_statement.json"),
                     ),
                     SizedBox(
-                      height: sizeV * 8, //5
+                      height: sizeV * 5, //5
                     ),
                     Text(
                       onboardingContents[index].title.i18n(),
@@ -81,7 +82,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: sizeV * 8, //5
+                      height: sizeV * 5, //5
                     ),
                     _OnboardingTaskB,
                   ],
@@ -108,7 +109,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ? MyTextButton(
                     buttonName: 'Get Started'.i18n(),
                     onpressed: () {
-                      Navigator.pop(context);
+                      //Navigator.pop(context);
                       Modular.to.pushNamed('/login');
                     },
                     btColor: kPrimaryColor,
