@@ -30,3 +30,8 @@ InLaw App
 | Gabriel Salmai Camargo Farias     | 1922130017 |
 | Eduardo de Oliveira Alvim         | 2012130076 |
 | Luiz Felipe Carvalho Gomes        | 1922130018 |
+
+
+## Links
+   [Overleaf Article](https://www.overleaf.com/read/vcmhmpvpybbd)
+   [Figma Prototype](https://www.figma.com/file/rRFMT7DJIV8f3kF79618F8/In-Law?node-id=0%3A1)
