@@ -2,11 +2,11 @@
 InLaw App
 
 <p>
-  Description TODO
+   Os dispositivos móveis são cada vez mais usados e estão se tornando cada vez mais importantes para as pessoas, como também os recursos oferecidos pelos mesmos. Com essa crescente de problemas que podem agora ser resolvidos pelos dispositivos móveis, o InLaw fará o uso de algumas funcionalidades presentes em um dispositivo móvel possibilitando facilitar a busca da resolução de problemas do usuário tanto sobre um processo rápido, a busca de um advogado qualificado ou até mesmo perguntas e resoluções rápidas, e ajudará também os advogados que necessitam de casos para resolver, dando a possibilidade para ele uma grande quantidade de pessoas que precisam de casos para serem resolvidos.
 <p>
   
   <p align="center">
-  <img src="https://github.com/Salmaii/InLaw/blob/master/mobile/lib/assets/images/namedLogo.png" alt="InLaw Logo" />
+    <img src="https://github.com/Salmaii/InLaw/blob/master/mobile/lib/assets/images/namedLogo.png" alt="InLaw Logo" />
   </p>
 
   
