@@ -1,5 +1,6 @@
 import 'package:InLaw/src/app_styles.dart';
 import 'package:InLaw/src/features/auth/domain/model/onboard_data.dart';
+import 'package:InLaw/src/features/auth/presentation/view/page/login_page.dart';
 import 'package:InLaw/src/size_configs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -123,6 +124,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ? MyTextButton(
                     buttonName: 'Get Started'.i18n(),
                     onpressed: () {
+                      //Navigator.push(
+                      //  context,
+                      //  MaterialPageRoute(builder: (context) => const LoginPage()),
+                      //);
                       Modular.to.pushNamed('/login');
                     },
                     btColor: kPrimaryColor,
