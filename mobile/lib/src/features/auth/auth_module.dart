@@ -1,3 +1,4 @@
+import 'package:InLaw/src/features/onboarding/onboarding_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../home/home_module.dart';

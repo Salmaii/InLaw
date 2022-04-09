@@ -2,7 +2,9 @@ import 'package:InLaw/src/app_styles.dart';
 import 'package:InLaw/src/features/auth/domain/model/onboard_data.dart';
 import 'package:InLaw/src/size_configs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
+import 'package:InLaw/src/features/auth/auth_module.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -120,7 +122,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
             currentPage == onboardingContents.length - 1
                 ? MyTextButton(
                     buttonName: 'Get Started'.i18n(),
-                    onpressed: () {},
+                    onpressed: () {
+                      Modular.to.pushNamed('/login');
+                    },
                     btColor: kPrimaryColor,
                   )
                 : Row(
