@@ -6,8 +6,7 @@ InLaw App
 <p>
   
   <p align="center">
-  <img src="https://github.com/Salmaii/InLaw/blob/master/mobile/lib/assets/images/Logo.png" alt="InLaw Logo" />
-  <img src="https://github.com/Salmaii/InLaw/blob/master/mobile/lib/assets/images/named.png" alt="InLaw Named Logo" />
+  <img src="https://github.com/Salmaii/InLaw/blob/master/mobile/lib/assets/images/namedLogo.png" alt="InLaw Logo" />
   </p>
 
   
