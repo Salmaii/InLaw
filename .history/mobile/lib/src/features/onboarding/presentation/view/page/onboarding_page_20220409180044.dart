@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
 import 'package:InLaw/src/features/auth/auth_module.dart';
-import 'package:lottie/lottie.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -64,8 +63,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     ),
                     Container(
                       height: sizeV * 30, //40
-                      child: Lottie.asset(
-                          "lib/assets/images/legal_statement.json"),
+                      child: Image.asset(
+                        onboardingContents[index].image,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                     SizedBox(
                       height: sizeV * 7, //5
@@ -90,11 +91,37 @@ class _OnboardingPageState extends State<OnboardingPage> {
   }
 
   Widget get _Welcome => Text(
-        'InLaw.'.i18n(),
+        'Bem-Vindo ao\naplicativo InLaw.'.i18n(),
         style: kTitle,
         textAlign: TextAlign.center,
       );
-
+  /*
+  Widget get _Text => RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(style: kBodyText1, children: [
+          TextSpan(text: 'Para'),
+          TextSpan(
+            text: ' ajudar os Advogados',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          TextSpan(text: ' que estão em busca do'),
+          TextSpan(
+            text: ' melhor caso',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          TextSpan(text: ' e para'),
+          TextSpan(
+            text: ' ajudar o cliente',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          TextSpan(text: ' que estão em busca de um'),
+          TextSpan(
+            text: ' advogado.',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+        ]),
+      );
+  */
   Widget get _OnboardingTaskB => Expanded(
         flex: 1,
         child: Column(

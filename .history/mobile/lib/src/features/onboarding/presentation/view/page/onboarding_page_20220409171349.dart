@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
 import 'package:InLaw/src/features/auth/auth_module.dart';
-import 'package:lottie/lottie.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -56,27 +55,33 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 itemBuilder: (context, index) => Column(
                   children: [
                     SizedBox(
-                      height: sizeV * 7, //5
+                      height: sizeV * 2,
                     ),
                     _Welcome,
                     SizedBox(
-                      height: sizeV * 7, //5
+                      height: sizeV * 2,
                     ),
                     Container(
-                      height: sizeV * 30, //40
-                      child: Lottie.asset(
-                          "lib/assets/images/legal_statement.json"),
+                      height: sizeV * 20,
+                      child: Image.asset(
+                        onboardingContents[index].image,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                     SizedBox(
-                      height: sizeV * 7, //5
+                      height: sizeV * 2,
                     ),
-                    Text(
-                      onboardingContents[index].title.i18n(),
-                      style: kBodyText1,
-                      textAlign: TextAlign.center,
+                    Expanded(
+                      child: PageView.builder(
+                        itemCount: onboardingContents.length,
+                        itemBuilder: (context, index) => Text(
+                          onboardingContents[index].title,
+                          style: kBodyText1,
+                        ),
+                      ),
                     ),
                     SizedBox(
-                      height: sizeV * 8, //5
+                      height: sizeV * 2,
                     ),
                     _OnboardingTaskB,
                   ],
@@ -90,9 +95,35 @@ class _OnboardingPageState extends State<OnboardingPage> {
   }
 
   Widget get _Welcome => Text(
-        'InLaw.'.i18n(),
+        'Bem-Vindo ao\naplicativo InLaw.'.i18n(),
         style: kTitle,
         textAlign: TextAlign.center,
+      );
+
+  Widget get _Text => RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(style: kBodyText1, children: [
+          TextSpan(text: 'Para'),
+          TextSpan(
+            text: ' ajudar os Advogados',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          TextSpan(text: ' que estão em busca do'),
+          TextSpan(
+            text: ' melhor caso',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          TextSpan(text: ' e para'),
+          TextSpan(
+            text: ' ajudar o cliente',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+          TextSpan(text: ' que estão em busca de um'),
+          TextSpan(
+            text: ' advogado.',
+            style: TextStyle(color: kPrimaryColor),
+          ),
+        ]),
       );
 
   Widget get _OnboardingTaskB => Expanded(
@@ -104,6 +135,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     buttonName: 'Get Started'.i18n(),
                     onpressed: () {
                       Navigator.pop(context);
+                      //Navigator.push(
+                      //  context,
+                      //  MaterialPageRoute(builder: (context) => const LoginPage()),
+                      //);
                       Modular.to.pushNamed('/login');
                     },
                     btColor: kPrimaryColor,
@@ -113,10 +148,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     children: [
                       OnboardingButton(
                         name: 'Skip'.i18n(),
-                        onPressed: () {
-                          Navigator.pop(context);
-                          Modular.to.pushNamed('/login');
-                        },
+                        onPressed: () {},
                       ),
                       Row(
                         children: List.generate(onboardingContents.length,

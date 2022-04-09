@@ -16,7 +16,7 @@ List<Onboarding> onboardingContents = [
   ),
   Onboarding(
     image: 'lib/assets/images/onboarding2.png',
-    title: 'Onboard_text3',
+    title: 'Onboard_text',
   ),
 ];
 

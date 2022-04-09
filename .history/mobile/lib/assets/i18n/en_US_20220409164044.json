@@ -1,9 +1,7 @@
 {
     "app_name" : "Example App",
 
-    "Onboard_text1" : "Need legal help?\n Find a lawyer. On your terms.",
-    "Onboard_text2" : "Qualified lawyer?\n Find new clients needing legal help.",
-    "Onboard_text3" : "Deal.",
+    "Onboard_text1" : "Para ajudar os Advogados que estão em busca do melhor caso  e para",
     "Skip" : "Skip",
     "Next" : "Next",
     "Get Started" : "Get Started",

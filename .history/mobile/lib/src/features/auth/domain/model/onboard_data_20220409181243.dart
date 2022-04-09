@@ -8,8 +8,7 @@ class Onboarding {
 }
 
 List<Onboarding> onboardingContents = [
-  Onboarding(
-      image: 'lib/assets/images/onboarding1.png', title: 'Onboard_text1'),
+  Onboarding(image: 'lib/assets/images/law_force.json', title: 'Onboard_text1'),
   Onboarding(
     image: 'lib/assets/images/onboarding1.png',
     title: 'Onboard_text2',

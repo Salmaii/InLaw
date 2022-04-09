@@ -9,16 +9,15 @@ class Onboarding {
 
 List<Onboarding> onboardingContents = [
   Onboarding(
-      image: 'lib/assets/images/onboarding1.png', title: 'Onboard_text1'),
+      image: 'lib/assets/images/onboarding1.png',
+      title:
+          'Para  que estão em busca do e para ajudar os clientes que estão em busca de um advogado.'),
   Onboarding(
     image: 'lib/assets/images/onboarding1.png',
-    title: 'Onboard_text2',
+    title: 'blablabla',
   ),
   Onboarding(
     image: 'lib/assets/images/onboarding2.png',
-    title: 'Onboard_text3',
+    title: 'Teste',
   ),
 ];
-
-
-//Para ajudar os Advogados que estão em busca do melhor caso e para ajudar os clientes que estão em busca de um advogado.

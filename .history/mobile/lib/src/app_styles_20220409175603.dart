@@ -5,13 +5,13 @@ Color kPrimaryColor = Color(0xffFC9803);
 Color kSecondaryColor = Color(0xffFFFFFF);
 
 final kTitle = TextStyle(
-  fontWeight: FontWeight.bold,
+  fontFamily: 'Klasik',
   fontSize: SizeConfig.blockSizeH! * 4, //7
   color: kSecondaryColor,
 );
 
 final kBodyText1 = TextStyle(
   color: kSecondaryColor,
-  fontSize: SizeConfig.blockSizeH! * 2, //4.5
-  fontFamily: 'Klasik',
+  fontSize: SizeConfig.blockSizeH! * 4, //4.5
+  fontWeight: FontWeight.bold,
 );
