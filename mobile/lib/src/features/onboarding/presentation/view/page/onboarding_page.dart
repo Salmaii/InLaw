@@ -56,19 +56,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 itemBuilder: (context, index) => Column(
                   children: [
                     SizedBox(
-                      height: sizeV * 7, //5
+                      height: sizeV * 8, //5
                     ),
-                    _Welcome,
+                    //_Welcome,
+                    Container(
+                      child: Image.asset(
+                        onboardingContents[index].image,
+                      )
+                    ),
                     SizedBox(
-                      height: sizeV * 7, //5
+                      height: sizeV * 8 //5
                     ),
                     Container(
-                      height: sizeV * 30, //40
+                      height: sizeV * 40, //40
                       child: Lottie.asset(
                           "lib/assets/images/legal_statement.json"),
                     ),
                     SizedBox(
-                      height: sizeV * 7, //5
+                      height: sizeV * 8, //5
                     ),
                     Text(
                       onboardingContents[index].title.i18n(),
@@ -90,10 +95,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
   }
 
   Widget get _Welcome => Text(
-        'InLaw.'.i18n(),
+        'InLaw'.i18n(),
         style: kTitle,
         textAlign: TextAlign.center,
-      );
+  );
 
   Widget get _OnboardingTaskB => Expanded(
         flex: 1,

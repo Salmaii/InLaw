@@ -6,12 +6,12 @@ Color kSecondaryColor = Color(0xffFFFFFF);
 
 final kTitle = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: SizeConfig.blockSizeH! * 4, //7
+  fontSize: SizeConfig.blockSizeH! * 7, //7
   color: kSecondaryColor,
 );
 
 final kBodyText1 = TextStyle(
   color: kSecondaryColor,
-  fontSize: SizeConfig.blockSizeH! * 2, //4.5
+  fontSize: SizeConfig.blockSizeH! * 4.5, //4.5
   fontFamily: 'Klasik',
 );

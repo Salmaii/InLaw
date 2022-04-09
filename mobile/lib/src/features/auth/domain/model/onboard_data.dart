@@ -9,13 +9,13 @@ class Onboarding {
 
 List<Onboarding> onboardingContents = [
   Onboarding(
-      image: 'lib/assets/images/onboarding1.png', title: 'Onboard_text1'),
+      image: 'lib/assets/images/named.png', title: 'Onboard_text1'),
   Onboarding(
-    image: 'lib/assets/images/onboarding1.png',
+    image: 'lib/assets/images/named.png',
     title: 'Onboard_text2',
   ),
   Onboarding(
-    image: 'lib/assets/images/onboarding2.png',
+    image: 'lib/assets/images/named.png',
     title: 'Onboard_text3',
   ),
 ];
