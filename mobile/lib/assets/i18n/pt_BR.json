@@ -3,6 +3,7 @@
     
     "Skip" : "Pular",
     "Next" : "Proximo",
+    "Back": "Voltar",
     "Get Started" : "Iniciar",
     "Onboard_text1" : "Precisa de ajuda jurídica?\n Encontre um advogado. Em seus termos.",
     "Onboard_text2" : "Advogado qualificado?\n Encontre novos clientes que precisam de ajuda jurídica.",
@@ -12,9 +13,15 @@
     "password" : "Senha",
     "password_hint" : "Informe a sua senha",
     "login" : "Login",
-    "forgot_password" : "Esqueci a senha!",
+    "forgot_password" : "Esqueci a senha",
     "username_required" : "O usuário é obrigatório",
+    "name_required" : "O nome é obrigatório",
     "password_required" : "A senha é obrigatória",
     "divider_text" : "ou",
-    "signup" : "Cadastrar"
+    "signup" : "Cadastrar",
+    "send_email": "Mandar Email",
+    "already_have_an_account": "Já Tem Uma Conta?",
+    "name": "Nome",
+    "name_hint": "Digite seu nome"
+
 }

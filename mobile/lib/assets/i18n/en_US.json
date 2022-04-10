@@ -7,14 +7,20 @@
     "Skip" : "Skip",
     "Next" : "Next",
     "Get Started" : "Get Started",
+    "Back": "Back",
     "username" : "User",
     "username_hint": "Type your username",
     "password": "Password",
     "password_hint": "Type your password",
     "login" : "Login",
-    "forgot_password" : "Forgot password!",
+    "forgot_password" : "Forgot password",
     "username_required" : "Username is required!",
+    "name_required" : "Name is required!",
     "password_required" : "Password is required!",
     "divider_text" : "or",
-    "signup" : "Sign Up"
+    "signup" : "Sign Up",
+    "send_email": "Send Email",
+    "already_have_an_account": "Already Have An Account?",
+    "name": "Name",
+    "name_hint": "Type your name"
 }
