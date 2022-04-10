@@ -1,3 +1,4 @@
+import 'package:InLaw/src/features/auth/presentation/view/page/forgotpassword_page.dart';
 import 'package:InLaw/src/features/onboarding/onboarding_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -21,6 +22,7 @@ class AuthModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute('/', child: (_, __) => const LoginPage()),
         ChildRoute('/signup', child: (_, __) => const SignUpPage()),
-        ModuleRoute('/home', module: HomeModule())
-      ];
+        ModuleRoute('/home', module: HomeModule()),
+        ChildRoute('/forgotPassword', child: (_, __) => const ForgotPasswordPage()),
+  ];
 }

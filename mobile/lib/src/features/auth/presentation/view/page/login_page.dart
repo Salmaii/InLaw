@@ -1,5 +1,6 @@
 import 'package:InLaw/src/common/form_text_field.dart';
 import 'package:InLaw/src/features/auth/presentation/view/page/signup_page.dart';
+import 'package:InLaw/src/features/auth/presentation/view/page/forgotpassword_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -71,7 +72,14 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         height: 56,
         child: TextButton(
           style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
-          onPressed: store.isLoading ? null : () {},
+          onPressed: store.isLoading 
+              ? null 
+              : () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ForgotPasswordPage())
+                );
+              },
           child: Text('forgot_password'.i18n()),
         ),
       );
