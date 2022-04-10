@@ -27,8 +27,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
       );
 
   Widget get _Logo => Container(
-        height: 130,
-        width: 130,
+        height: 150,
+        width: 150,
         child: Image.asset('lib/assets/images/Logo.png'),
       );
 
