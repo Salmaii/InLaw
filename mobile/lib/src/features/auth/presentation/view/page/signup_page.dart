@@ -4,7 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
 import '../../viewmodel/sign_up_viewmodel.dart';
-
+import 'package:InLaw/src/theme.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -113,14 +113,17 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
   Widget build(BuildContext context) {
     _theme = Theme.of(context);
     _colors = _theme.colorScheme;
-
-    return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Observer(builder: (_) {
-            return Form(child: _formBuild);
-          }),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: getTheme(),
+      home: Scaffold(
+        appBar: AppBar(centerTitle: true, title: const Text('InLaw')),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Observer(builder: (_) {
+              return Form(child: _formBuild);
+            }),
+          ),
         ),
       ),
     );

@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
 import '../../viewmodel/login_viewmodel.dart';
 import 'package:InLaw/src/common/form_text_field.dart';
+import 'package:InLaw/src/theme.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({Key? key}) : super(key: key);
@@ -84,7 +85,26 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
               );
 
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
+    _theme = Theme.of(context);
+    _colors = _theme.colorScheme;
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: getTheme(),
+      home: Scaffold(
+        appBar: AppBar(centerTitle: true, title: const Text('InLaw')),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Observer(builder: (_) {
+              return Form(child: _formBuild);
+            }),
+          ),
+        ),
+      ),
+    );
+  }
+}
+/*   Widget build(BuildContext context) {
     _theme = Theme.of(context);
     _colors = _theme.colorScheme;
 
@@ -100,3 +120,4 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
     );
   }
 }
+ */

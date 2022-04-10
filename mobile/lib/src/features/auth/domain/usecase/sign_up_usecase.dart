@@ -22,7 +22,7 @@ class SignUpUseCase {
 
   String? validatePassword(String password) {
     if (password.isEmpty) {
-      return 'login_password_required'.i18n();
+      return 'password_required'.i18n();
     }
     return null;
   }
