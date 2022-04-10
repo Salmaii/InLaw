@@ -27,8 +27,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
       );
 
   Widget get _Logo => Container(
-        height: 130,
-        width: 130,
+        height: 150,
+        width: 150,
         child: Image.asset('lib/assets/images/Logo.png'),
       );
 
@@ -160,6 +160,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
   Widget build(BuildContext context) {
     _theme = Theme.of(context);
     _colors = _theme.colorScheme;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: getTheme(),

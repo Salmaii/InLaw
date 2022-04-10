@@ -160,6 +160,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
   Widget build(BuildContext context) {
     _theme = Theme.of(context);
     _colors = _theme.colorScheme;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: getTheme(),

@@ -1,7 +1,6 @@
 import 'package:InLaw/src/common/form_text_field.dart';
 import 'package:InLaw/src/features/auth/presentation/view/page/signup_page.dart';
 import 'package:InLaw/src/features/auth/presentation/view/page/forgotpassword_page.dart';
-import 'package:InLaw/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -24,12 +23,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           backgroundColor: Colors.blueGrey,
         ),
         visible: store.isLoading,
-      );
-
-  Widget get _Logo => Container(
-        height: 130,
-        width: 130,
-        child: Image.asset('lib/assets/images/Logo.png'),
       );
 
   Widget get _username => widget.createFormField(
@@ -79,14 +72,14 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         height: 56,
         child: TextButton(
           style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
-          onPressed: store.isLoading
-              ? null
+          onPressed: store.isLoading 
+              ? null 
               : () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ForgotPasswordPage()));
-                },
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ForgotPasswordPage())
+                );
+              },
           child: Text('forgot_password'.i18n()),
         ),
       );
@@ -106,12 +99,12 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           onPressed: store.isLoading
               ? null
               : () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignUpPage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUpPage())
+                );
                   //Modular.to.pushNamed('/signup');
-                },
+              },
           child: Text('signup'.i18n()),
         ),
       );
@@ -137,40 +130,33 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
       );
 
   Widget get _formBuild => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          _loadingIndicator,
-          const SizedBox(height: 5),
-          Center(
-            child: _Logo,
-          ),
-          const SizedBox(height: 5),
-          _username,
-          _password,
-          _loginButton,
-          _forgotPasswordButton,
-          _divider,
-          _signUp
-        ],
-      );
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  _loadingIndicator,
+                  const SizedBox(height: 5),
+                  _username,
+                  _password,
+                  _loginButton,
+                  _forgotPasswordButton,
+                  _divider,
+                  _signUp
+                ],
+              );
 
   @override
   Widget build(BuildContext context) {
     _theme = Theme.of(context);
     _colors = _theme.colorScheme;
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: getTheme(),
-      home: Scaffold(
-        appBar: AppBar(centerTitle: true, title: const Text('InLaw')),
-        body: Center(
-          child: SingleChildScrollView(
-            child: Observer(builder: (_) {
-              return Form(child: _formBuild);
-            }),
-          ),
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Login')),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Observer(builder: (_) {
+            return Form(child: _formBuild);
+          }),
         ),
       ),
     );
