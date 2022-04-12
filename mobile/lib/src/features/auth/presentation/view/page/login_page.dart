@@ -29,7 +29,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
   Widget get _Logo => Container(
         height: 130,
         width: 130,
-        child: Image.asset('lib/assets/images/Logo.png'),
+        child: Image.asset('lib/assets/images/logo.png'),
       );
 
   Widget get _username => widget.createFormField(
