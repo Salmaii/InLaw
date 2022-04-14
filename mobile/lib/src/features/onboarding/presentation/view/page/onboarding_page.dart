@@ -1,12 +1,11 @@
 import 'package:InLaw/src/app_styles.dart';
 import 'package:InLaw/src/features/auth/domain/model/onboard_data.dart';
-import 'package:InLaw/src/features/auth/presentation/view/page/login_page.dart';
 import 'package:InLaw/src/size_configs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:localization/localization.dart';
-import 'package:InLaw/src/features/auth/auth_module.dart';
 import 'package:lottie/lottie.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({Key? key}) : super(key: key);
@@ -16,6 +15,17 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage> {
+
+  @override
+  void initState() {
+    super.initState();
+    initialization();
+  }
+
+  void initialization() async {
+    FlutterNativeSplash.remove();
+  }
+  
   int currentPage = 0;
 
   PageController _pageController = PageController();
