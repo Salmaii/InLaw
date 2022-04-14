@@ -3,11 +3,20 @@ import './size_configs.dart';
 
 Color kPrimaryColor = Color(0xffFC9803);
 Color kSecondaryColor = Color(0xffFFFFFF);
+Color kTertiaryColor = Colors.black;
 
 final kTitle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: SizeConfig.blockSizeH! * 7, //7
   color: kSecondaryColor,
+);
+
+final kTitleBlack = TextStyle(
+  height: 0,
+  fontWeight: FontWeight.w700,
+  fontSize: SizeConfig.blockSizeH! * 9, //7
+  color: kTertiaryColor,
+  //fontFamily: 'Klasik',
 );
 
 final kBodyText1 = TextStyle(

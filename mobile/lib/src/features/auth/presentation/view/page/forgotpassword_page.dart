@@ -1,3 +1,4 @@
+import 'package:InLaw/src/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -16,6 +17,16 @@ class ForgotPasswordPage extends StatefulWidget {
 class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginViewModel> {
   late ColorScheme _colors;
   late ThemeData _theme;
+
+  Widget get _pageName => Container(
+    width: double.infinity,
+    height: 60,
+    child: Text(
+      'Password Recovery'.i18n(),
+      style: kTitleBlack,
+      textAlign: TextAlign.center,
+    ),
+  );
 
   Widget get _loadingIndicator => Visibility(
         child: const LinearProgressIndicator(
@@ -76,11 +87,12 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  _loadingIndicator,
                   const SizedBox(height: 5),
+                  _pageName,
                   _username,
                   _recoverPasswordButton,
                   _backToLoginButton, // voltar para o login
+                  _loadingIndicator,
                 ],
               );
 
@@ -95,29 +107,23 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
         appBar: AppBar(centerTitle: true, title: const Text('InLaw')),
         body: Center(
           child: SingleChildScrollView(
-            child: Observer(builder: (_) {
-              return Form(child: _formBuild);
-            }),
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.88,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                )
+              ),
+
+              child: Observer(builder: (_) {
+                return Form(child: _formBuild);
+              }),
+            )
           ),
         ),
       ),
     );
   }
 }
-/*   Widget build(BuildContext context) {
-    _theme = Theme.of(context);
-    _colors = _theme.colorScheme;
-
-    return Scaffold(
-      appBar: AppBar(title: const Text('Password Recovery')),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Observer(builder: (_) {
-            return Form(child: _formBuild);
-          }),
-        ),
-      ),
-    );
-  }
-}
- */

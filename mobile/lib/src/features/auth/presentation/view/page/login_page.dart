@@ -141,7 +141,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          _loadingIndicator,
           const SizedBox(height: 5),
           Center(
             child: _Logo,
@@ -152,7 +151,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           _loginButton,
           _forgotPasswordButton,
           _divider,
-          _signUp
+          _signUp,
+          _loadingIndicator,
         ],
       );
 
@@ -167,9 +167,20 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         appBar: AppBar(centerTitle: true, title: const Text('InLaw')),
         body: Center(
           child: SingleChildScrollView(
-            child: Observer(builder: (_) {
-              return Form(child: _formBuild);
-            }),
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.88,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                )
+              ),
+
+              child: Observer(builder: (_) {
+                return Form(child: _formBuild);
+              }),
+            )
           ),
         ),
       ),

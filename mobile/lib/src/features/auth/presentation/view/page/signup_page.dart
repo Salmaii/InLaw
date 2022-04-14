@@ -1,3 +1,4 @@
+import 'package:InLaw/src/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:InLaw/src/common/form_text_field.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -16,6 +17,16 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
   late ColorScheme _colors;
   late ThemeData _theme;
+
+  Widget get _pageName => Container(
+    width: double.infinity,
+    height: 60,
+    child: Text(
+      'Sign Up'.i18n(),
+      style: kTitleBlack,
+      textAlign: TextAlign.center,
+    ),
+  );
 
   Widget get _loadingIndicator => Visibility(
         child: const LinearProgressIndicator(
@@ -99,13 +110,14 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  _loadingIndicator,
                   const SizedBox(height: 5),
+                  _pageName,
                   _name,
                   _username,
                   _password,
                   _signUpButton,
                   _backToLoginButton,
+                  _loadingIndicator,
                 ],
               );
 
@@ -118,11 +130,22 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
       theme: getTheme(),
       home: Scaffold(
         appBar: AppBar(centerTitle: true, title: const Text('InLaw')),
+        backgroundColor: AppColors.primary,
         body: Center(
           child: SingleChildScrollView(
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.88,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(40),
+                  topRight: Radius.circular(40),
+                )
+              ),
             child: Observer(builder: (_) {
               return Form(child: _formBuild);
             }),
+            )
           ),
         ),
       ),
