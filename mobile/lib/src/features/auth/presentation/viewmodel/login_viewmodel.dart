@@ -27,7 +27,7 @@ abstract class _LoginViewModelBase with Store {
 
   @action
   void validatePassword() {
-    error.password = _usecase.validatePassword(password);
+    error.password = _usecase.validatePassword(password, username);
   }
 
   void login() async {
@@ -40,7 +40,7 @@ abstract class _LoginViewModelBase with Store {
       isLoading = true;
       try {
         await _usecase.login(username, password);
-        //page to 
+        //page to
       } on UnimplementedError {
         // TODO: Fix!!!
         error.login = 'Função não implementada!';
