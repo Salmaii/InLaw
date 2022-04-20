@@ -65,25 +65,22 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
                 borderRadius: BorderRadius.circular(6),
               ),
             ),
-          ),
-          //onPressed: store.isLoading ? null : () {store.login, pop},
-          //Navigator.pop(context);
-          onPressed: store.isLoading ? null : store.login,
-          
-          /*
+          ),       
           onPressed: store.isLoading ? null : () {
-            store.login; 
-            // NOT here just for test !!! Start
-            Navigator.push(
-              context, 
-              MaterialPageRoute(
-                  builder: (context) => const HomePage()
-              )
-            );
-            // NOT here just for test !!! End
+            var validateLogin = store.login; 
+            if(validateLogin == true){
+              // pop atual route
+              // Navigator.pop(context);
+              // push to next
+              // trocar para modular.pushNamed
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                    builder: (context) => const HomePage()
+                )
+              );
+            }
           },
-          */
-
           child: Text('login'.i18n()),
         ),
       );
