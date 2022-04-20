@@ -68,9 +68,11 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           ),
           //onPressed: store.isLoading ? null : () {store.login, pop},
           //Navigator.pop(context);
+          onPressed: store.isLoading ? null : store.login,
+          
+          /*
           onPressed: store.isLoading ? null : () {
             store.login; 
-
             // NOT here just for test !!! Start
             Navigator.push(
               context, 
@@ -79,8 +81,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
               )
             );
             // NOT here just for test !!! End
-
           },
+          */
+
           child: Text('login'.i18n()),
         ),
       );
