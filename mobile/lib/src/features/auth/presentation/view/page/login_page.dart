@@ -1,6 +1,7 @@
 import 'package:InLaw/src/common/form_text_field.dart';
 import 'package:InLaw/src/features/auth/presentation/view/page/signup_page.dart';
 import 'package:InLaw/src/features/auth/presentation/view/page/forgotpassword_page.dart';
+import 'package:InLaw/src/features/home/presentation/view/page/home_page.dart';
 import 'package:InLaw/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -67,7 +68,19 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
           ),
           //onPressed: store.isLoading ? null : () {store.login, pop},
           //Navigator.pop(context);
-          onPressed: store.isLoading ? null : store.login,
+          onPressed: store.isLoading ? null : () {
+            store.login; 
+
+            // NOT here just for test !!! Start
+            Navigator.push(
+              context, 
+              MaterialPageRoute(
+                  builder: (context) => const HomePage()
+              )
+            );
+            // NOT here just for test !!! End
+
+          },
           child: Text('login'.i18n()),
         ),
       );
@@ -78,14 +91,14 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         height: 56,
         child: TextButton(
           style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
-          onPressed: store.isLoading
-              ? null
-              : () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ForgotPasswordPage()));
-                },
+          onPressed: store.isLoading ? null : () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ForgotPasswordPage()
+              )
+            );
+          },
           child: Text('forgot_password'.i18n()),
         ),
       );
@@ -102,13 +115,13 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
               ),
             ),
           ),
-          onPressed: store.isLoading
-              ? null
-              : () {
+          onPressed: store.isLoading ? null : () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignUpPage()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpPage()
+                    )
+                  );
                   //Modular.to.pushNamed('/signup');
                 },
           child: Text('signup'.i18n()),

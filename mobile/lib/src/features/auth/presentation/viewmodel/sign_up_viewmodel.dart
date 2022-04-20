@@ -38,7 +38,7 @@ abstract class _SignUpViewModelBase with Store {
     error.password = _usecase.validatePassword(password);
   }
 
-  void login() async {
+  void signUp() async {
     error.clear();
 
     validateName();
