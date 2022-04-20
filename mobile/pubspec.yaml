@@ -39,11 +39,10 @@ dev_dependencies:
   build_runner: ^2.1.8
 
 flutter_icons:
-    image_path_ios: "lib/assets/images/logo.png"
-    image_path_android: "lib/assets/images/foregroundLogo.png"
+    image_path: "lib/assets/images/foregroundLogo.png"
     ios: true
     android: true
-    adaptative_icon_background: "#011C2E"
+    adaptive_icon_background: "#011C2E"
     adaptative_icon_foreground: "lib/assets/images/foregroundLogo.png"
     remove_aplha_ios: true
 
