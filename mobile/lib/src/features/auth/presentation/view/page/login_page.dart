@@ -31,15 +31,15 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         child: Image.asset('lib/assets/images/logoImage.png'),
       );
 
-  Widget get _username => widget.createFormField(
-        title: 'username'.i18n(),
+  Widget get _email => widget.createFormField(
+        title: 'email'.i18n(),
         theme: _theme,
         keyboardType: TextInputType.emailAddress,
         textInputAction: TextInputAction.next,
-        hint: 'username_hint'.i18n(),
+        hint: 'email_hint'.i18n(),
         enabled: !store.isLoading,
-        errorText: store.error.username,
-        onChange: (value) => store.username = value,
+        errorText: store.error.email,
+        onChange: (value) => store.email = value,
       );
 
   Widget get _password => widget.createFormField(
@@ -145,7 +145,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
             child: _logo,
           ),
           const SizedBox(height: 5),
-          _username,
+          _email,
           _password,
           _loginButton,
           _forgotPasswordButton,

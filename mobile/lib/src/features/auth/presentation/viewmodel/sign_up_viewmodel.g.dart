@@ -24,18 +24,18 @@ mixin _$SignUpViewModel on _SignUpViewModelBase, Store {
     });
   }
 
-  final _$usernameAtom = Atom(name: '_SignUpViewModelBase.username');
+  final _$emailAtom = Atom(name: '_SignUpViewModelBase.email');
 
   @override
-  String get username {
-    _$usernameAtom.reportRead();
-    return super.username;
+  String get email {
+    _$emailAtom.reportRead();
+    return super.email;
   }
 
   @override
-  set username(String value) {
-    _$usernameAtom.reportWrite(value, super.username, () {
-      super.username = value;
+  set email(String value) {
+    _$emailAtom.reportWrite(value, super.email, () {
+      super.email = value;
     });
   }
 
@@ -84,11 +84,11 @@ mixin _$SignUpViewModel on _SignUpViewModelBase, Store {
   }
 
   @override
-  void validateUsername() {
+  void validateEmail() {
     final _$actionInfo = _$_SignUpViewModelBaseActionController.startAction(
-        name: '_SignUpViewModelBase.validateUsername');
+        name: '_SignUpViewModelBase.validateEmail');
     try {
-      return super.validateUsername();
+      return super.validateEmail();
     } finally {
       _$_SignUpViewModelBaseActionController.endAction(_$actionInfo);
     }
@@ -109,7 +109,7 @@ mixin _$SignUpViewModel on _SignUpViewModelBase, Store {
   String toString() {
     return '''
 name: ${name},
-username: ${username},
+email: ${email},
 password: ${password},
 isLoading: ${isLoading}
     ''';
@@ -140,18 +140,18 @@ mixin _$SignUpError on _SignUpErrorBase, Store {
     });
   }
 
-  final _$usernameAtom = Atom(name: '_SignUpErrorBase.username');
+  final _$emailAtom = Atom(name: '_SignUpErrorBase.email');
 
   @override
-  String? get username {
-    _$usernameAtom.reportRead();
-    return super.username;
+  String? get email {
+    _$emailAtom.reportRead();
+    return super.email;
   }
 
   @override
-  set username(String? value) {
-    _$usernameAtom.reportWrite(value, super.username, () {
-      super.username = value;
+  set email(String? value) {
+    _$emailAtom.reportWrite(value, super.email, () {
+      super.email = value;
     });
   }
 
@@ -189,7 +189,7 @@ mixin _$SignUpError on _SignUpErrorBase, Store {
   String toString() {
     return '''
 name: ${name},
-username: ${username},
+email: ${email},
 password: ${password},
 signUp: ${signUp},
 hasErrors: ${hasErrors}

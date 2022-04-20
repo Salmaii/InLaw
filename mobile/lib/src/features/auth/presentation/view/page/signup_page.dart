@@ -46,15 +46,15 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
         onChange: (value) => store.name = value,
   );
 
-  Widget get _username => widget.createFormField(
-        title: 'username'.i18n(),
+  Widget get _email => widget.createFormField(
+        title: 'email'.i18n(),
         theme: _theme,
         keyboardType: TextInputType.emailAddress,
         textInputAction: TextInputAction.next,
-        hint: 'username_hint'.i18n(),
+        hint: 'email_hint'.i18n(),
         enabled: !store.isLoading,
-        errorText: store.error.username,
-        onChange: (value) => store.username = value,
+        errorText: store.error.email,
+        onChange: (value) => store.email = value,
   );
 
   Widget get _password => widget.createFormField(
@@ -112,7 +112,7 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
                   const SizedBox(height: 5),
                   _pageName,
                   _name,
-                  _username,
+                  _email,
                   _password,
                   _signUpButton,
                   _backToLoginButton,

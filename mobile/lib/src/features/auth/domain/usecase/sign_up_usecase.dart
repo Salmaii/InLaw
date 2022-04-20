@@ -11,10 +11,9 @@ class SignUpUseCase {
     return null;
   }
  
-  String? validateUsername(String username) {
-    if (username.isEmpty) return 'username_required'.i18n();
-    if (username.contains(RegExp(r"[0-9]"))) return 'username_invalid_number'.i18n();
-    if (username.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))) return 'username_invalid_special'.i18n();
+  String? validateEmail(String email) {
+    if (email.isEmpty) return 'email_required'.i18n();
+    if (!RegExp(r'\S+@\S+\.\S+').hasMatch(email)) return 'email_invalid_format'.i18n();          
     return null;
   }
 
@@ -28,7 +27,7 @@ class SignUpUseCase {
     return null;
   }
 
-  Future<SignUpUser> signUp(String name,String username, String password) {
-    return repository.signUp(SignUpUser(name, username, password));
+  Future<SignUpUser> signUp(String name,String email, String password) {
+    return repository.signUp(SignUpUser(name, email, password));
   }
 }

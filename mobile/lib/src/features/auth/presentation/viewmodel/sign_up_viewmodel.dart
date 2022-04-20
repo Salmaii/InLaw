@@ -15,7 +15,7 @@ abstract class _SignUpViewModelBase with Store {
   String name = '';
 
   @observable
-  String username = '';
+  String email = '';
 
   @observable
   String password = '';
@@ -29,8 +29,8 @@ abstract class _SignUpViewModelBase with Store {
   }
 
   @action
-  void validateUsername() {
-    error.username = _usecase.validateUsername(username);
+  void validateEmail() {
+    error.email = _usecase.validateEmail(email);
   }
 
   @action
@@ -42,13 +42,13 @@ abstract class _SignUpViewModelBase with Store {
     error.clear();
 
     validateName();
-    validateUsername();
+    validateEmail();
     validatePassword();
 
     if (!error.hasErrors) {
       isLoading = true;
       try {
-        await _usecase.signUp(name, username, password);
+        await _usecase.signUp(name, email, password);
         //page to 
       } on UnimplementedError {
         // TODO: Fix!!!
@@ -68,7 +68,7 @@ abstract class _SignUpErrorBase with Store {
   String? name;
 
   @observable
-  String? username;
+  String? email;
 
   @observable
   String? password;
@@ -77,11 +77,11 @@ abstract class _SignUpErrorBase with Store {
   String? signUp;
 
   @computed
-  bool get hasErrors => name != null || username != null || password != null || signUp != null;
+  bool get hasErrors => name != null || email != null || password != null || signUp != null;
 
   void clear() {
     name = null;
-    username = null;
+    email = null;
     password = null;
     signUp = null;
   }

@@ -13,8 +13,8 @@
     
     "name": "Nome",
     "name_hint": "Digite seu nome",
-    "username" : "Usuário",
-    "username_hint" : "Informe o nome do seu usuário",
+    "email" : "Email",
+    "email_hint" : "Informe o endereço de email",
     "password" : "Senha",
     "password_hint" : "Informe a sua senha",
 
@@ -26,9 +26,8 @@
 
     "name_required" : "O nome é obrigatório",
 
-    "username_required" : "O usuário é obrigatório",
-    "username_invalid_special" : "O usuário não pode ter caracteres especiais",
-    "username_invalid_number" : "O usuário não pode conter números",
+    "email_required" : "O email é obrigatório",
+    "email_invalid_format" : "Endereço de email inválido",
 
     "password_required" : "A senha é obrigatória",    
     "password_invalid_lenght" : "A senha precisa de no mínimo 8 caracteres",

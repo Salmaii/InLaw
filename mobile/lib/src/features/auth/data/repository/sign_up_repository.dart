@@ -13,7 +13,7 @@ class SignUpRepository implements ISignUp {
     );
     if (response.statusCode == 200) {
       final token = response.headers.value('Authorization');
-      final domain = SignUpUser(signUpUser.name, signUpUser.username, null, token: token);
+      final domain = SignUpUser(signUpUser.name, signUpUser.email, null, token: token);
       return Future.value(domain);
     } else {
       throw Exception("Algo de errado aconteceu");

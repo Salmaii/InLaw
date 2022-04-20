@@ -13,8 +13,8 @@
 
     "name": "Name",
     "name_hint": "Type your name",
-    "username" : "User",
-    "username_hint": "Type your username",
+    "email" : "Email",
+    "email_hint": "Type your email",
     "password": "Password",
     "password_hint": "Type your password",
 
@@ -26,13 +26,12 @@
 
     "name_required" : "Name is required!",
 
-    "username_required" : "Username is required!",
-    "username_invalid_special" : "Username cannot contain special characters!",
-    "username_invalid_number" : "Username cannot contain numbers!",
+    "email_required" : "Email is required!",
+    "email_invalid_format" : "Please enter a valid email address",
 
     "password_required" : "Password is required!",
     "password_invalid_lenght" : "Password must have least 8 characters",
-    "password_invalid_special" : "Password must have a special character!",
+    "password_invalid_special" : "Password must have a special character",
     "password_invalid_number" : "Password must have a number",
     "password_invalid_lower_case" : "Password must have an uppercase letter",
     "password_invalid_upper_case" : "Password must have a lowercase letter"
