@@ -16,7 +16,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
-  late ColorScheme _colors;
   late ThemeData _theme;
 
   Widget get _loadingIndicator => Visibility(
@@ -26,7 +25,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         visible: store.isLoading,
       );
 
-  Widget get _Logo => Container(
+  Widget get _logo => Container(
         height: 130,
         width: 130,
         child: Image.asset('lib/assets/images/logoImage.png'),
@@ -143,7 +142,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         children: [
           const SizedBox(height: 5),
           Center(
-            child: _Logo,
+            child: _logo,
           ),
           const SizedBox(height: 5),
           _username,
@@ -159,7 +158,6 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
   @override
   Widget build(BuildContext context) {
     _theme = Theme.of(context);
-    _colors = _theme.colorScheme;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: getTheme(),

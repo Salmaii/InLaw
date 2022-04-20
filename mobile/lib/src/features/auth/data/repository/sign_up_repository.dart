@@ -1,7 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:InLaw/src/features/auth/data/dto/user_dto.dart';
-import '../../domain/model/user.dart';
-
 import 'package:InLaw/src/features/auth/data/dto/sign_up_dto.dart';
 import '../../domain/model/sign_up_user.dart';
 import '../../domain/repository/sign_up_interface.dart';

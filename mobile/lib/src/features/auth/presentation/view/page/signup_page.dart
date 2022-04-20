@@ -15,7 +15,6 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
-  late ColorScheme _colors;
   late ThemeData _theme;
 
   Widget get _pageName => Container(
@@ -124,7 +123,6 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
   @override
   Widget build(BuildContext context) {
     _theme = Theme.of(context);
-    _colors = _theme.colorScheme;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: getTheme(),

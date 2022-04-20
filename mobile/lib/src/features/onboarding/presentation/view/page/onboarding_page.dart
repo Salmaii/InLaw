@@ -49,7 +49,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     double sizeH = SizeConfig.blockSizeH!;
     double sizeV = SizeConfig.blockSizeV!;
     return Scaffold(
-      backgroundColor: Color(0xFF011C2E),
+      backgroundColor: const Color(0xFF011C2E),
       body: SafeArea(
         child: Column(
           children: [
@@ -68,7 +68,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     SizedBox(
                       height: sizeV * 6, //5
                     ),
-                    //_Welcome,
                     Container(
                       height: sizeV * 8,
                       child: Image.asset(
@@ -104,12 +103,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
       ),
     );
   }
-
-  Widget get _Welcome => Text(
-        'InLaw'.i18n(),
-        style: kTitle,
-        textAlign: TextAlign.center,
-  );
 
   Widget get _OnboardingTaskB => Expanded(
         flex: 1,

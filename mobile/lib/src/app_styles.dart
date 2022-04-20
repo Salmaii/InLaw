@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './size_configs.dart';
 
-Color kPrimaryColor = Color(0xffFC9803);
-Color kSecondaryColor = Color(0xffFFFFFF);
+Color kPrimaryColor = const Color(0xffFC9803);
+Color kSecondaryColor = const Color(0xffFFFFFF);
 Color kTertiaryColor = Colors.black;
 
 final kTitle = TextStyle(

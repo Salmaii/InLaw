@@ -15,7 +15,6 @@ class ForgotPasswordPage extends StatefulWidget {
 }
 
 class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginViewModel> {
-  late ColorScheme _colors;
   late ThemeData _theme;
 
   Widget get _pageName => Container(
@@ -99,7 +98,6 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
   @override
     Widget build(BuildContext context) {
     _theme = Theme.of(context);
-    _colors = _theme.colorScheme;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: getTheme(),
