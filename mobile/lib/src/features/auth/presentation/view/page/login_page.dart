@@ -1,7 +1,4 @@
 import 'package:InLaw/src/common/form_text_field.dart';
-import 'package:InLaw/src/features/auth/presentation/view/page/signup_page.dart';
-import 'package:InLaw/src/features/auth/presentation/view/page/forgotpassword_page.dart';
-import 'package:InLaw/src/features/home/presentation/view/page/home_page.dart';
 import 'package:InLaw/src/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -65,21 +62,22 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
                 borderRadius: BorderRadius.circular(6),
               ),
             ),
-          ),       
+          ),    
+
           onPressed: store.isLoading ? null : () {
+
+            //Correct Function !
+            /* 
             var validateLogin = store.login; 
             if(validateLogin == true){
-              // pop atual route
-              // Navigator.pop(context);
-              // push to next
-              // trocar para modular.pushNamed
-              Navigator.push(
-                context, 
-                MaterialPageRoute(
-                    builder: (context) => const HomePage()
-                )
-              );
+              Modular.to.pop('/'); //Use Modular to pop actual route
+              Modular.to.pushNamed('/home/userId'); //Use Modular args to use userId
             }
+            */
+            //Correct Function!
+
+            // NO Validating just for testing! //TODO Validate User
+            Modular.to.pushNamed('/home/');
           },
           child: Text('login'.i18n()),
         ),
@@ -92,12 +90,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
         child: TextButton(
           style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
           onPressed: store.isLoading ? null : () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const ForgotPasswordPage()
-              )
-            );
+            Modular.to.pushNamed('/login/forgotPassword');
           },
           child: Text('forgot_password'.i18n()),
         ),
@@ -116,14 +109,8 @@ class _LoginPageState extends ModularState<LoginPage, LoginViewModel> {
             ),
           ),
           onPressed: store.isLoading ? null : () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignUpPage()
-                    )
-                  );
-                  //Modular.to.pushNamed('/signup');
-                },
+            Modular.to.pushNamed('/login/signup');
+          },
           child: Text('signup'.i18n()),
         ),
       );

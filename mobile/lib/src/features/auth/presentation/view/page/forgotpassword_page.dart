@@ -14,7 +14,7 @@ class ForgotPasswordPage extends StatefulWidget {
   State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
 }
 
-class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginViewModel> {
+class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginViewModel> { // TODO ForgotPasswordViewModel
   late ThemeData _theme;
 
   Widget get _pageName => Container(
@@ -58,7 +58,8 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
             ),
           ),
           //onPressed: store.isLoading ? null : () {store.login, pop},
-          //Navigator.pop(context);
+          // TODO Modular.to.pop('')
+          // TODO Navigator.pop(context);
           onPressed: store.isLoading ? null : store.login,
           child: Text('send_email'.i18n()),
         ),
@@ -71,6 +72,7 @@ class _ForgotPasswordPageState extends ModularState<ForgotPasswordPage, LoginVie
         child: TextButton(
           style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
           onPressed: store.isLoading 
+          // TODO Trocar para Modular.to.pop('')
               ? null 
               : () {
                 Navigator.pop(

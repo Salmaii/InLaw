@@ -81,7 +81,8 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
             ),
           ),
           //onPressed: store.isLoading ? null : () {store.login, pop},
-          //Navigator.pop(context);
+          // TODO Modular.to.pop('')
+          // TODO Navigator.pop(context);
           onPressed: store.isLoading ? null : store.signUp,
           child: Text('signup'.i18n()),
         ),
@@ -94,6 +95,7 @@ class _SignUpPageState extends ModularState<SignUpPage, SignUpViewModel> {
           child: TextButton(
             style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
             onPressed: store.isLoading ? null : () {
+              // TODO Trocar para Modular.to.pop('')
               Navigator.pop(
                 context,
               );

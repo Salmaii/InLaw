@@ -113,7 +113,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     buttonName: 'Get Started'.i18n(),
                     onpressed: () {
                       Navigator.pop(context);
-                      Modular.to.pushNamed('/login');
+                      Modular.to.pushNamed('/login/');
                     },
                     btColor: kPrimaryColor,
                   )
@@ -124,7 +124,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         name: 'Skip'.i18n(),
                         onPressed: () {
                           //Navigator.pop(context);
-                          Modular.to.pushNamed('/login');
+                          Modular.to.pushNamed('/login/');
                         },
                       ),
                       Row(
