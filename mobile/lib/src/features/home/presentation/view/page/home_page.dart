@@ -26,15 +26,35 @@ class _HomePageState extends ModularState<HomePage, HomeViewModel> {
     ),
   );
 
-  Widget get _block => Container(
-    width: 40,
-    height: 40,
-    child: Text(
-      'This is a block'.i18n(),
-      style: kTitleBlack,
-      textAlign: TextAlign.center,
-    ),
-  );
+  Widget get _categoryBlock => Container(
+        margin: const EdgeInsets.fromLTRB(30, 30, 30, 20),
+        width: 60,
+        height: 60,
+        color: AppColors.secondary, // TODO Change Color Create _categoryButton Color theme in theme.dart
+        child: TextButton(
+          style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
+          onPressed: store.isLoading ? null : () {
+            Modular.to.pushNamed('/home/userId');
+          },
+          child: Text('Civil'.i18n()), // TODO Category Names
+        ),
+      );
+
+    Widget get _categoryContainer => GridView.count( // TODO Fix GridView
+      primary: false,
+      padding: const EdgeInsets.all(20),
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
+      crossAxisCount: 2,
+      children: <Widget>[
+        _categoryBlock,
+        _categoryBlock,
+        _categoryBlock,
+        _categoryBlock,
+        _categoryBlock,
+        _categoryBlock,
+      ],
+    );
 
   Widget get _formBuild => Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,6 +63,11 @@ class _HomePageState extends ModularState<HomePage, HomeViewModel> {
                 children: [
                   const SizedBox(height: 5),
                   _pageName,
+                  _categoryBlock,
+                  _categoryBlock,
+                  _categoryBlock,
+                  _categoryBlock,
+                  //_categoryContainer,
                 ],
               );
 
