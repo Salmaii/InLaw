@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import '../home/home_module.dart';
+import 'package:InLaw/src/features/home/home_module.dart';
 
 import 'presentation/view/page/login_page.dart';
 import 'data/repository/login_repository.dart';
@@ -24,13 +24,13 @@ class AuthModule extends Module {
         Bind.factory((i) => SignUpViewModel()),
         Bind.factory((i) => SignUpUseCase()),
         Bind.factory<ISignUp>((i) => SignUpRepository()),
-      ];
+  ];
 
   @override
   List<ModularRoute> get routes => [
         ChildRoute('/', child: (_, __) => const LoginPage()),
         ChildRoute('/signup', child: (_, __) => const SignUpPage()),
         ChildRoute('/forgotPassword', child: (_, __) => const ForgotPasswordPage()),
-        ModuleRoute('/home', module: HomeModule()),
+        ModuleRoute('/home/', module: HomeModule()),
   ];
 }
